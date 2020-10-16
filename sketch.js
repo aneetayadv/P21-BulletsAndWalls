@@ -21,6 +21,7 @@ function draw() {
 
   if(wall.x-bullet.x < bullet.width/2 + wall.width/2)
   {
+    bullet.x = wall.x - ((bullet.width + wall.width)/2);
     bullet.velocityX = 0;
     var deformation = (0.5 * weight * speed * speed)/ (thickness*thickness*thickness);
     text("Damage :  "+ Math.round(deformation),1000,100);
